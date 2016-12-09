@@ -1,0 +1,9 @@
+<?php
+for($i=1;$i<23;$i++){
+	if($i<10){
+		$ep="S01E0".$i;
+	}else{
+		$ep="S01E".$i;
+	}
+	echo 'mkvextract tracks "/home/team/torrents/Michiko.E.Hatchin.S01.SUBFRENCH.1080p.BluRay.x264-MANAMANE/Michiko.E.Hatchin.'.$ep.'.SUBFRENCH.1080p.BluRay.x264-MANAMANE.mkv" 2:/home/team/torrents/1.srt  && ffmpeg -y -i /home/team/torrents/1.srt /home/team/torrents/1.ass && sed -i \'s/Style: Default,Arial,16,\&Hffffff,\&Hffffff,\&H0,\&H0,0,0,0,1,1,0,2,10,10,10,0,0/Style: Default,Verdana,20,\&H00FFFFFF,\&H00000000,\&H00000000,\&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,15,15,15,0/g\' /home/team/torrents/1.ass && sed -i \'s/Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, AlphaLevel, Encoding/Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic,  Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding/g\' /home/team/torrents/1.ass && ffmpeg -y -i "/home/team/torrents/Michiko.E.Hatchin.S01.SUBFRENCH.1080p.BluRay.x264-MANAMANE/Michiko.E.Hatchin.'.$ep.'.SUBFRENCH.1080p.BluRay.x264-MANAMANE.mkv" -map 0:0 -map 0:1 -metadata:s:v:0:0 title=\'\' -c:v:0:0 libx264 -crf 16 -s:v:0:0 688x384 -vf "ass=/home/team/torrents/1.ass" -preset:v slow -tune animation -profile:v high -level 3.1 -metadata:s:a:0: title="" -metadata:s:a:0: language=\'jpn\' -c:a:0:1 libmp3lame -b:a:0:1 128000 -threads 0  "/home/team/torrents/Michiko.E.Hatchin.'.$ep.'.VOSTFR.SUBFORCED.BRRiP.x264-CiRAR.mkv" && mkvpropedit "/home/team/torrents/Michiko.E.Hatchin.'.$ep.'.VOSTFR.SUBFORCED.BRRiP.x264-CiRAR.mkv" --edit info --set "title=Michiko.E.Hatchin.'.$ep.'.VOSTFR.SUBFORCED.BRRiP.x264-CiRAR" && ';
+}
